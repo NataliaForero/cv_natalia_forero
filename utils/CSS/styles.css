@@ -6,21 +6,21 @@
   --font-semi: 600;
 }
 
-/*===== Colores =====*/
-:root{
+/*===== Colores =====*/ 
+:root{/*===== pseudo-clase :root =====*/
   --first-color: #5546aa;
   --second-color: #0E2431;
 }
 
 /*===== Fuente y tipografia =====*/
-:root{
+:root{/*===== pseudo-clase :root =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
   --normal-font-size: 0.938rem;
 }
 @media screen and (min-width: 768px){
-  :root{
+  :root{/*===== pseudo-clase :root =====*/
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
@@ -28,7 +28,7 @@
 }
 
 /*===== Margenes =====*/
-:root{
+:root{/*===== pseudo-clase :root =====*/
   --mb-1: 0.5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
@@ -38,7 +38,7 @@
 }
 
 /*===== z index =====*/
-:root{
+:root{/*===== pseudo-clase :root =====*/
   --z-back: -10;
   --z-normal: 1;
   --z-tooltip: 10;
@@ -46,7 +46,7 @@
 }
 
 /*===== BASE =====*/
-*,::before,::after{
+*,::before,::after{ /* pseudo clase :before  :after */
   box-sizing: border-box;
 }
 html{
@@ -84,7 +84,7 @@ img{
   margin-bottom: var(--mb-4);
   text-align: center;
 }
-.section-title::after{
+.section-title::after{ /* pseudo clase   :after */
   position: absolute;
   content: "";
   width: 64px;
@@ -116,7 +116,7 @@ img{
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: rgb(110, 20, 20);
+  background-color: rgb(223, 221, 221);
   box-shadow: 0 1px 4px rgba(146,161,176,.15);
 }
 
@@ -128,7 +128,7 @@ img{
   align-items: center;
   font-weight: var(--font-semi);
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px){ /*===== responsive =====*/
   .nav__menu{
     position: fixed;
     top: var(--header-height);
@@ -147,10 +147,10 @@ img{
   position: relative;
   color: #fff;
 }
-.nav__link:hover{
+.nav__link:hover{ /* pseudo clase hover   */
   position: relative;
 }
-.nav__link:hover::after{
+.nav__link:hover::after{ /* pseudo clase hover mas :after */
   position: absolute;
   content: "";
   width: 100%;
@@ -209,14 +209,17 @@ img{
   font-size: 1.5rem;
   color: var(--second-color);
 }
-.home__social-icon:hover{
+.home__social-icon:hover{ /*===== pseudo clase  =====*/
   color: var(--first-color);
 }
-.home__img{
+.home__img{ /*===== imagen principal =====*/
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 295px;
+  width: 270px; 
+}
+#yo{ /*===== imagen principal=====*/
+  width: 285px; 
 }
 
 /*BUTTONS*/
